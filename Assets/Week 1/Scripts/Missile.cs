@@ -5,7 +5,7 @@ using UnityEngine;
 public class Missile : MonoBehaviour
 {
     Rigidbody2D rigibody;
-    float speed = 5.0f;
+    float speed = 10.0f;
     // Start is called before the first frame update
     void Start()
     {
