@@ -21,6 +21,6 @@ public class PlagueDoctorMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rigibody.velocity = direction * speed * Time.deltaTime;
+        rigibody.AddForce(direction * speed * Time.deltaTime);
     }
 }
