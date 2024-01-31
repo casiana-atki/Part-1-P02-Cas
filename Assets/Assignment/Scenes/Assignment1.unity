@@ -853,6 +853,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &529628629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 529628631}
+  - component: {fileID: 529628630}
+  m_Layer: 0
+  m_Name: Plague Doctor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &529628630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529628629}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b4d272a6168af143bb75ad6bbc3b366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigibody: {fileID: 0}
+  speed: 350
+  prefab: {fileID: 9035564789627267892, guid: 524f4a7940dee1942a5122a6fa2ae250, type: 3}
+  spawnPoint: {fileID: 2015860068}
+--- !u!4 &529628631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529628629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.3, y: 55.7, z: 1.753878}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1482455012}
+  - {fileID: 2015860068}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &617413047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,7 +1595,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 10.31
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1570,7 +1620,7 @@ Transform:
   m_GameObject: {fileID: 814746795}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0979868, y: -33.72534, z: -10}
+  m_LocalPosition: {x: 0.32800174, y: -29.388805, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1621,7 +1671,8 @@ GameObject:
   - component: {fileID: 852444640}
   - component: {fileID: 852444641}
   - component: {fileID: 852444642}
-  m_Layer: 0
+  - component: {fileID: 852444643}
+  m_Layer: 11
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1638,7 +1689,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.13853884, w: 0.99035704}
   m_LocalPosition: {x: -20.360624, y: -18.921135, z: 2.6022727}
-  m_LocalScale: {x: 16.765362, y: 3.599494, z: 1}
+  m_LocalScale: {x: 16.76536, y: 3.599494, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 139488753}
@@ -1740,6 +1791,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &852444643
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852444639}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &939545785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,11 +2898,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1482455012}
   - component: {fileID: 1482455011}
-  - component: {fileID: 1482455013}
   - component: {fileID: 1482455014}
   - component: {fileID: 1482455015}
-  m_Layer: 0
-  m_Name: Character
+  - component: {fileID: 1482455016}
+  m_Layer: 9
+  m_Name: Character Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2890,27 +2968,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482455010}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1, y: -34.1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3, y: -90.3, z: -1.753878}
   m_LocalScale: {x: 1.9947637, y: 2.135404, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 529628631}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1482455013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482455010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b4d272a6168af143bb75ad6bbc3b366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigibody: {fileID: 0}
-  speed: 300
 --- !u!50 &1482455014
 Rigidbody2D:
   serializedVersion: 4
@@ -2983,6 +3047,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9568555, y: 2.7}
   m_EdgeRadius: 0
+--- !u!114 &1482455016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482455010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b4d272a6168af143bb75ad6bbc3b366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigibody: {fileID: 0}
+  speed: 350
+  prefab: {fileID: 9035564789627267892, guid: 524f4a7940dee1942a5122a6fa2ae250, type: 3}
+  spawnPoint: {fileID: 2015860068}
 --- !u!1 &1575753094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3549,6 +3629,54 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &2015860067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2015860068}
+  - component: {fileID: 2015860069}
+  m_Layer: 0
+  m_Name: FireballSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2015860068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015860067}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.05, y: -2.48, z: -1.753878}
+  m_LocalScale: {x: 1.9947637, y: 2.135404, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 529628631}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2015860069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015860067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b4d272a6168af143bb75ad6bbc3b366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigibody: {fileID: 0}
+  speed: 350
+  prefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!1 &2019018403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3589,7 +3717,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1482455012}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 6
+    OrthographicSize: 10.31
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3615,7 +3743,7 @@ Transform:
   m_GameObject: {fileID: 2019018403}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1, y: -34.1, z: -10}
+  m_LocalPosition: {x: 0.29999995, y: -34.600002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3775,11 +3903,11 @@ SceneRoots:
   m_Roots:
   - {fileID: 814746798}
   - {fileID: 1250303176}
-  - {fileID: 1482455012}
   - {fileID: 2019018405}
+  - {fileID: 1264460968}
   - {fileID: 1211701329}
   - {fileID: 101786702}
   - {fileID: 717586384}
   - {fileID: 139488753}
   - {fileID: 2006387656}
-  - {fileID: 1264460968}
+  - {fileID: 529628631}
