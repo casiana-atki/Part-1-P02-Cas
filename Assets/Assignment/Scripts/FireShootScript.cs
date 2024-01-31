@@ -25,6 +25,8 @@ public class FireShootScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Destroy(gameObject);
+
         GameObject collidedObject = collision.gameObject;
 
         if (collidedObject.name == "Obstacle")

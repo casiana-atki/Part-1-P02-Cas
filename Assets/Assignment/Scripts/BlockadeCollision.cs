@@ -16,18 +16,10 @@ public class ObstacleCollision : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == block)
-        {
-            if (block.activeInHierarchy)
-            {
-                block.SetActive(false);
-            }
-            else
-            {
-                block.SetActive(true);
-            }
-        }
+        block.SetActive(true);
     }
 }
+
